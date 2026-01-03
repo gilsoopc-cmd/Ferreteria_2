@@ -22,57 +22,27 @@ class Database extends Config
     public string $defaultGroup = 'default';
 
     /**
-     * The default database connection. EL QUE FUNCIONA
+     * The default database connection.
      */
-    /*public array $default = [
-         'DSN'       => '',
-    'hostname'  => 'localhost',
-    'username'  => 'postgre',
-    'password'  => 'Cc_34',
-    'database'  => 'ferreteria',
-    'DBDriver'  => 'Postgre',
-    'DBPrefix'  => '',
-    'pConnect'  => false,
-    'DBDebug'   => true,
-    'charset'   => 'utf8',
-    'DBCollat'  => 'utf8_general_ci',
-    'swapPre'   => '',
-    'encrypt'   => false,
-    'compress'  => false,
-    'strictOn'  => false,
-    'failover'  => [],
-    'port'      => 5432,
-    'dateFormat'=> [
-        'date'     => 'Y-m-d',
-        'datetime' => 'Y-m-d H:i:s',
-        'time'     => 'H:i:s',
-    ];*/
-
     public array $default = [
-    'DSN'       => '',
-    'hostname'  => 'db',          // Nombre del servicio de Docker
-    'username'  => 'postgres',    // Usuario definido en docker-compose
-    'password'  => 'postgres',    // Contraseña definida en docker-compose
-    'database'  => 'postgres',    // Base de datos definida en docker-compose
-    'DBDriver'  => 'Postgre',
-    'DBPrefix'  => '',
-    'pConnect'  => false,
-    'DBDebug'   => true,
-    'charset'   => 'utf8',
-    'DBCollat'  => 'utf8_general_ci',
-    'swapPre'   => '',
-    'encrypt'   => false,
-    'compress'  => false,
-    'strictOn'  => false,
-    'failover'  => [],
-    'port'      => 5432,
-    'schema'    => 'public',
-    'dateFormat'=> [
-        'date'     => 'Y-m-d',
-        'datetime' => 'Y-m-d H:i:s',
-        'time'     => 'H:i:s',
-    ],
-];
+        'DSN'      => '',
+        'hostname' => 'localhost',
+        'username' => '',
+        'password' => '',
+        'database' => '',
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => true,
+        'charset'  => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'     => 3306,
+    ];
 
     /**
      * This database connection is used when
