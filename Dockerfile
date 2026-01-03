@@ -1,4 +1,4 @@
-# Imagen base de PHP 8.1 con Apache
+# Dockerfile
 FROM php:8.1-apache
 
 # Instalar dependencias de compilación y PostgreSQL
@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     git \
     unzip \
+    gcc \
+    make \
+    autoconf \
     && docker-php-ext-install pdo pdo_pgsql \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 

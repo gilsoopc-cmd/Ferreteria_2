@@ -1,13 +1,12 @@
-version: "3.8"
-
+# docker-compose.yml
 services:
   php:
-    build: .  # <--- Ahora construye la imagen desde tu Dockerfile
+    build: .                 # Construye la imagen desde tu Dockerfile
     container_name: ci4-php
     ports:
       - "8080:80"
     volumes:
-      - .:/var/www/html
+      - .:/var/www/html      # Monta tu proyecto en el contenedor
     depends_on:
       - db
     environment:
@@ -22,4 +21,10 @@ services:
       POSTGRES_DB: ferreteria
     ports:
       - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # Mantiene la base de datos aunque el contenedor se reinicie
+
+# Volumen persistente para PostgreSQL
+volumes:
+  pgdata:
       
